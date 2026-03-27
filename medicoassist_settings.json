@@ -1,0 +1,121 @@
+{
+  "_comment": "FisioterapiAssist.it — Configurazione studio fisioterapico italiano",
+  "_version": "1.0.0",
+  "_locale": "it-IT",
+  "_gdpr": "GARANTE Privacy — D.Lgs. 196/2003 + Reg. UE 2016/679",
+
+  "studio": {
+    "nome": "Studio FisioterapiAssist",
+    "partita_iva": "",
+    "codice_fiscale_studio": "",
+    "indirizzo": {
+      "via": "",
+      "cap": "",
+      "citta": "",
+      "provincia": "",
+      "regione": "",
+      "paese": "IT"
+    },
+    "telefono": "",
+    "email": "info@fisioterapiassist.it",
+    "sito_web": "https://www.fisioterapiassist.it",
+    "asl_convenzione": "",
+    "regione_sanitaria": ""
+  },
+
+  "orari": {
+    "lunedi":    { "apertura": "08:00", "chiusura": "19:00" },
+    "martedi":   { "apertura": "08:00", "chiusura": "19:00" },
+    "mercoledi": { "apertura": "08:00", "chiusura": "19:00" },
+    "giovedi":   { "apertura": "08:00", "chiusura": "19:00" },
+    "venerdi":   { "apertura": "08:00", "chiusura": "18:00" },
+    "sabato":    { "apertura": "09:00", "chiusura": "13:00" },
+    "domenica":  null
+  },
+
+  "sanitario": {
+    "ticket_base_eur": 36.15,
+    "ticket_ridotto_eur": 0.00,
+    "codici_esenzione_supportati": ["E", "R", "G", "D", "I"],
+    "nre_obbligatorio": true,
+    "ssn_convenzionato": true,
+    "privato_accettato": true
+  },
+
+  "prestazioni": {
+    "FKT_001": { "nome": "Fisioterapia motoria individuale",  "durata_minuti": 45, "ticket_applicabile": true  },
+    "FKT_002": { "nome": "Rieducazione posturale globale",    "durata_minuti": 60, "ticket_applicabile": true  },
+    "FKT_003": { "nome": "Fisioterapia respiratoria",         "durata_minuti": 30, "ticket_applicabile": true  },
+    "FKT_004": { "nome": "Linfodrenaggio manuale",            "durata_minuti": 60, "ticket_applicabile": true  },
+    "FKT_005": { "nome": "Tecar terapia",                     "durata_minuti": 30, "ticket_applicabile": true  },
+    "FKT_006": { "nome": "TENS / elettrostimolazione",        "durata_minuti": 20, "ticket_applicabile": true  },
+    "FKT_007": { "nome": "Ultrasuoni terapeutici",            "durata_minuti": 20, "ticket_applicabile": true  },
+    "FKT_008": { "nome": "Magnetoterapia",                    "durata_minuti": 20, "ticket_applicabile": true  },
+    "FKT_009": { "nome": "Massoterapia",                      "durata_minuti": 45, "ticket_applicabile": false },
+    "FKT_010": { "nome": "Terapia occupazionale",             "durata_minuti": 60, "ticket_applicabile": true  }
+  },
+
+  "ai": {
+    "gemini_model": "gemini-2.0-flash-live-001",
+    "gemini_api_key": "",
+    "lingua_principale": "it-IT",
+    "lingua_fallback": "it-IT",
+    "anna_voice": "Charon",
+    "max_session_minutes": 10,
+    "cf_max_tentativi": 3,
+    "cf_confidence_threshold": 0.75
+  },
+
+  "vonage": {
+    "api_key": "",
+    "api_secret": "",
+    "application_id": "",
+    "numero_chiamate": "",
+    "webhook_base_url": "",
+    "websocket_base_url": "",
+    "audio_sample_rate": 16000,
+    "audio_encoding": "linear16"
+  },
+
+  "email": {
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_user": "",
+    "smtp_password": "",
+    "from_email": "noreply@fisioterapiassist.it",
+    "from_name": "FisioterapiAssist",
+    "conferma_automatica": true,
+    "promemoria_ore_prima": 24,
+    "template_lingua": "it"
+  },
+
+  "supabase": {
+    "url": "",
+    "anon_key": "",
+    "service_role_key": "",
+    "schema": "fisioterapiassist",
+    "tabelle": {
+      "appuntamenti": "appuntamenti",
+      "pazienti": "pazienti",
+      "fisioterapisti": "fisioterapisti",
+      "sessioni_chiamata": "sessioni_chiamata"
+    }
+  },
+
+  "gdpr": {
+    "data_controller": "Studio FisioterapiAssist",
+    "dpo_email": "",
+    "retention_days_appuntamenti": 3650,
+    "retention_days_chiamate": 30,
+    "retention_days_email": 365,
+    "anonimizzazione_cf_in_log": true,
+    "consenso_obbligatorio": true
+  },
+
+  "logging": {
+    "level": "INFO",
+    "anonimizza_cf": true,
+    "log_trascrizioni": false,
+    "sentry_dsn": ""
+  }
+}
