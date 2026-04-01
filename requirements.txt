@@ -1,12 +1,21 @@
 # Core
 python-dotenv>=1.0.0
 pydantic>=2.0.0
+pydantic[email]
 
 # Google Gemini Live API
 google-generativeai>=0.8.0
 
 # Vonage Voice API
 vonage>=3.0.0
+
+# FastAPI & Server
+fastapi>=0.100.0
+uvicorn>=0.25.0
+
+# Authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.0
 
 # Email
 # smtplib is part of stdlib
@@ -21,6 +30,12 @@ supabase>=2.0.0
 
 # Utilities
 python-dateutil>=2.9.0
+
+# Payments (optional)
+# stripe>=7.0.0
+
+# Error tracking (optional)
+# sentry-sdk[fastapi]>=1.40.0
 
 # Testing
 pytest>=8.0.0
